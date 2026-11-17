@@ -160,7 +160,7 @@ def card_layer(c, t):
     if key not in _ccache: _ccache[key] = make_card(c)
     im = _ccache[key]
     estilo = c.get("estilo", "app")
-    y_fin = int(H * c.get("y", 0.21 if estilo == "notif" else 0.42))
+    y_fin = int(H * c.get("y", 0.32 if estilo == "notif" else 0.42))
     y = int(y_fin + (1 - k) * (-260 if estilo == "notif" else 200))
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     lay.alpha_composite(fade(im, min(clamp(k * 1.5), a_out)), ((W - im.width) // 2, y))
