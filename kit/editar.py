@@ -201,4 +201,16 @@ if ESTILO == "v3" and "[a]" in fc and job.get("voz"):
 run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", fc, "-map", "[vv]", "-map", "[a]", "-t", f"{total:.2f}",
      "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
      "-movflags", "+faststart", job["salida"]])
+# Ajuste final de volumen: loudnorm de una pasada queda ~1 dB corto; medimos y corregimos a -14 LUFS.
+import re as _re
+_m = subprocess.run(["ffmpeg", "-hide_banner", "-i", job["salida"], "-af", "ebur128", "-f", "null", "-"],
+                    capture_output=True, text=True).stderr
+_i = _re.findall(r"I:\s+(-?[\d.]+) LUFS", _m)
+if _i:
+    _gain = -14.0 - float(_i[-1])
+    if abs(_gain) > 0.4:
+        _tmp = job["salida"] + ".tmp.mp4"
+        run(["ffmpeg", "-v", "error", "-y", "-i", job["salida"], "-c:v", "copy", "-af",
+             f"volume={_gain:.2f}dB,alimiter=limit=0.84", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", _tmp])
+        os.replace(_tmp, job["salida"])
 print("Listo:", job["salida"], f"{total:.1f}s")
