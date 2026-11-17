@@ -73,6 +73,11 @@ total = sum(s["dur"] for s in job["segmentos"])
 
 # 2. Efectos Postcard
 fx = mont
+# Las notificaciones nunca van durante el gancho: si chocan, entran justo cuando el gancho termina.
+_g1 = (job.get("gancho") or {}).get("t1", 0)
+for c in job.get("cards", []):
+    if c.get("estilo") == "notif" and c["t0"] < _g1:
+        dur = max(1.8, c["t1"] - c["t0"]); c["t0"] = _g1 + 0.15; c["t1"] = c["t0"] + dur
 if job.get("big") or job.get("icons") or job.get("cards") or job.get("end"):
     fx = f"{tmp}/efectos.mp4"
     cfg = {"input": mont, "output": fx, "big": job.get("big", []), "icons": job.get("icons", []), "cards": job.get("cards", []), "end": job.get("end")}
