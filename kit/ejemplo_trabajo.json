@@ -1,0 +1,101 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c11.mov",
+   "inicio": 69.0,
+   "dur": 3.6
+  },
+  {
+   "clip": "clips/c11.mov",
+   "inicio": 10.0,
+   "dur": 1.4
+  },
+  {
+   "clip": "clips/c04.mp4",
+   "inicio": 0.3,
+   "dur": 4.0
+  },
+  {
+   "clip": "clips/c09.mov",
+   "inicio": 0.0,
+   "dur": 2.8
+  },
+  {
+   "clip": "clips/c10.mov",
+   "inicio": 0.5,
+   "dur": 1.85
+  },
+  {
+   "clip": "clips/c06.mov",
+   "inicio": 2.0,
+   "dur": 2.8
+  },
+  {
+   "clip": "clips/c05.mp4",
+   "inicio": 0.2,
+   "dur": 2.65
+  }
+ ],
+ "voz": "voz.mp3",
+ "palabras": "palabras.json",
+ "gancho": {
+  "texto": "¿Alguien más\\N se siente así?",
+  "t1": 3.6
+ },
+ "ocultar": [
+  [
+   11.8,
+   16.45
+  ]
+ ],
+ "subs_fin": 16.45,
+ "big": [
+  {
+   "text": "$50.000",
+   "t0": 11.8,
+   "t1": 13.65,
+   "y": 0.045,
+   "size": 290
+  },
+  {
+   "text": "$100.000",
+   "t0": 13.65,
+   "t1": 16.45,
+   "y": 0.045,
+   "size": 290
+  }
+ ],
+ "icons": [
+  {
+   "name": "moneybag",
+   "t0": 2.7,
+   "t1": 3.6,
+   "side": "right"
+  },
+  {
+   "name": "heart",
+   "t0": 6.9,
+   "t1": 7.95,
+   "side": "right"
+  },
+  {
+   "name": "briefcase",
+   "t0": 7.95,
+   "t1": 9.0,
+   "side": "right"
+  },
+  {
+   "name": "building",
+   "t0": 9.45,
+   "t1": 10.9,
+   "side": "left"
+  }
+ ],
+ "end": {
+  "t0": 16.5,
+  "title": "Mamá",
+  "sub": "Envíaselo"
+ },
+ "musica": "musica.mp3",
+ "salida": "final.mp4"
+}
