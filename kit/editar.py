@@ -13,6 +13,10 @@ El trabajo (ver ejemplo_trabajo.json) trae:
               íconos 3D (icons3d/), tarjetas tipo app o notificación Petra, tarjeta final
   musica      mp3 de música con licencia; vol_musica (0.30 por defecto)
   salida      ruta del video final
+  variante    (opcional) prueba A/B del Estilista. "v5a" = gancho instantáneo: el texto del gancho
+              ya está completo en el cuadro 0 (sin fundido ni escala) y el primer plano se parte en
+              golpes de zoom (punch-in) cada ~1,2 s mientras dura el gancho, para que haya cambio
+              visual antes del segundo 1 y del segundo 2 (ahí se nos va la gente).
   estilo      "v3" (por defecto) o "v2". v3: color cálido, zoom en cada corte, gancho en caja rosada,
               subtítulos palabra por palabra con la palabra activa en amarillo y efectos de sonido
 Pasos: montaje 1080x1920 con corrección de HDR → efectos Postcard → subtítulos → mezcla
@@ -41,8 +45,14 @@ if ESTILO == "v3":
     CROP = ("scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1,"
             "eq=contrast=1.05:saturation=1.18:brightness=0.02:gamma_r=1.03:gamma_b=0.97")
 
-def zoom(i, d):
-    """v3: el primer plano entra con un golpe de zoom; los demás alternan acercar y alejar suave."""
+VARIANTE = job.get("variante")
+
+def zoom(i, d, punch=None):
+    """v3: el primer plano entra con un golpe de zoom; los demás alternan acercar y alejar suave.
+    punch (variante v5a): zoom fijo de un golpe dentro del primer plano, con leve deriva."""
+    if punch is not None:
+        z = f"({punch}+0.02*t/{d})"
+        return (f",scale=w='trunc(1080*{z}/2)*2':h='trunc(1920*{z}/2)*2':eval=frame:flags=bicubic:in_range=tv:out_range=tv,crop=1080:1920,format=yuv420p")
     if ESTILO != "v3":
         return ""
     if i == 0:
@@ -55,13 +65,25 @@ def zoom(i, d):
 TONE = "zscale=t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,tonemap=mobius:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p,"
 
 # 1. Montaje
+segs = [dict(x) for x in job["segmentos"]]
+if VARIANTE == "v5a" and segs:
+    # Parte el primer plano en golpes de ~1,2 s mientras dura el gancho (zoom 1,00 → 1,16 → 1,06 → 1,20…).
+    s0, g1 = segs[0], (job.get("gancho") or {}).get("t1", 0)
+    lim = min(s0["dur"], max(g1, 2.4))
+    golpes, t, k = [], 0.0, 0
+    niveles = [None, 1.16, 1.06, 1.20]
+    while t < s0["dur"] - 0.05:
+        d = 1.2 if t + 1.2 < lim and s0["dur"] - (t + 1.2) > 0.5 else s0["dur"] - t
+        golpes.append({"clip": s0["clip"], "inicio": s0["inicio"] + t, "dur": round(d, 3), "_punch": niveles[k % 4] if k else None})
+        t += d; k += 1
+    segs = golpes + segs[1:]
 parts = []
-for i, s in enumerate(job["segmentos"]):
+for i, s in enumerate(segs):
     tr = transfer(s["clip"])
     pre = TONE if tr == "smpte2084" else (TONE.replace("zscale=t=linear", "zscale=tin=arib-std-b67:t=linear", 1) if tr == "arib-std-b67" else "")
     out = f"{tmp}/s{i:02d}.mp4"
     run(["ffmpeg", "-v", "error", "-y", "-ss", str(s["inicio"]), "-t", str(s["dur"]), "-i", s["clip"],
-         "-vf", pre + CROP + zoom(i, s["dur"]) + ",setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709:range=tv",
+         "-vf", pre + CROP + zoom(i, s["dur"], s.get("_punch")) + ",setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709:range=tv",
          "-an", "-c:v", "libx264", "-preset", "fast", "-crf", "17", "-pix_fmt", "yuv420p",
          "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", "-color_range", "tv", out])
     parts.append(out)
@@ -108,6 +130,8 @@ for i, w in enumerate(words):
 ev = []
 if hook:
     anim = "{\\fad(120,150)\\fscx70\\fscy70\\t(0,180,\\fscx104\\fscy104)\\t(180,260,\\fscx100\\fscy100)}" if ESTILO == "v3" else "{\\fad(150,150)}"
+    if VARIANTE == "v5a":
+        anim = "{\\fad(0,150)}"  # completo desde el cuadro 0
     ev.append(f"Dialogue: 0,{ts(0)},{ts(hook['t1'])},Hook,,0,0,0,,{anim}{hook['texto']}")
 chunk_words, cur = [], []
 for i, w in enumerate(words):
