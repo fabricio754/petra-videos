@@ -1,0 +1,99 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c25.mov",
+   "inicio": 0.0,
+   "dur": 3.1
+  },
+  {
+   "clip": "clips/c25.mov",
+   "inicio": 3.4,
+   "dur": 2.2
+  },
+  {
+   "clip": "clips/c18.mov",
+   "inicio": 2.0,
+   "dur": 2.3
+  },
+  {
+   "clip": "clips/c17.mov",
+   "inicio": 20.0,
+   "dur": 2.5
+  },
+  {
+   "clip": "clips/c20.mov",
+   "inicio": 4.0,
+   "dur": 2.0
+  },
+  {
+   "clip": "clips/c10.mov",
+   "inicio": 0.5,
+   "dur": 3.2
+  },
+  {
+   "clip": "clips/c20.mov",
+   "inicio": 24.5,
+   "dur": 4.6
+  }
+ ],
+ "voz": "mama-luchona.mp3",
+ "palabras": "mama-luchona.json",
+ "gancho": {
+  "texto": "Para la mamá\\N luchona",
+  "t1": 3.0
+ },
+ "ocultar": [
+  [
+   13.0,
+   15.3
+  ]
+ ],
+ "subs_fin": 18.2,
+ "big": [
+  {
+   "text": "$50.000",
+   "t0": 13.0,
+   "t1": 15.3,
+   "y": 0.045,
+   "size": 290,
+   "label": "por cada visita"
+  }
+ ],
+ "icons": [
+  {
+   "name": "baby-carriage",
+   "t0": 3.6,
+   "t1": 5.2,
+   "side": "right"
+  },
+  {
+   "name": "heart",
+   "t0": 8.4,
+   "t1": 10.0,
+   "side": "left"
+  },
+  {
+   "name": "home",
+   "t0": 10.9,
+   "t1": 12.0,
+   "side": "right"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "laptop-woman",
+   "title": "Trabajo desde casa",
+   "sub": "mientras él duerme",
+   "t0": 5.4,
+   "t1": 7.5
+  }
+ ],
+ "end": {
+  "t0": 18.2,
+  "title": "Mamá luchona",
+  "sub": "envíaselo a una amiga"
+ },
+ "musica": "piano.mp3",
+ "salida": "mama-luchona.mp4"
+}
