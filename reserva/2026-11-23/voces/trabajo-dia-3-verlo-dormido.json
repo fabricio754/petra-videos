@@ -1,0 +1,85 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c18.mov",
+   "inicio": 0.0,
+   "dur": 2.88
+  },
+  {
+   "clip": "clips/c01.mov",
+   "inicio": 0.0,
+   "dur": 2.76
+  },
+  {
+   "clip": "clips/c23.mov",
+   "inicio": 0.5,
+   "dur": 3.24
+  },
+  {
+   "clip": "clips/c11.mov",
+   "inicio": 5.0,
+   "dur": 2.0
+  },
+  {
+   "clip": "clips/c27.mov",
+   "inicio": 7.0,
+   "dur": 2.0
+  },
+  {
+   "clip": "clips/c27.mov",
+   "inicio": 11.0,
+   "dur": 2.24
+  },
+  {
+   "clip": "clips/c18.mov",
+   "inicio": 6.0,
+   "dur": 3.4
+  }
+ ],
+ "voz": "dia-3-verlo-dormido.mp3",
+ "palabras": "dia-3-verlo-dormido.json",
+ "gancho": {
+  "texto": "Solo lo iba a\\N ver dormido",
+  "t1": 2.88
+ },
+ "ocultar": [],
+ "subs_fin": 16.8,
+ "big": [],
+ "icons": [
+  {
+   "name": "clock",
+   "t0": 3.3,
+   "t1": 4.5,
+   "side": "left"
+  },
+  {
+   "name": "home",
+   "t0": 9.3,
+   "t1": 10.6,
+   "side": "right"
+  },
+  {
+   "name": "heart",
+   "t0": 11.4,
+   "t1": 12.6,
+   "side": "left"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "laptop-woman",
+   "title": "Mamá que trabaja",
+   "sub": "Día 3",
+   "t0": 6.4,
+   "t1": 8.8
+  }
+ ],
+ "end": {
+  "t0": 16.8,
+  "title": "¿Te pasa igual?",
+  "sub": "Escribe QUIERO"
+ },
+ "musica": "piano_emotivo.mp3",
+ "salida": "dia-3-verlo-dormido.mp4"
+}

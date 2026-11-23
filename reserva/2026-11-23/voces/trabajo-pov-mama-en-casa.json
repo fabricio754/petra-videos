@@ -1,0 +1,98 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c02.mov",
+   "inicio": 0.0,
+   "dur": 2.4
+  },
+  {
+   "clip": "clips/c19.mov",
+   "inicio": 0.5,
+   "dur": 2.28
+  },
+  {
+   "clip": "clips/c19.mov",
+   "inicio": 5.5,
+   "dur": 2.12
+  },
+  {
+   "clip": "clips/c08.mov",
+   "inicio": 0.5,
+   "dur": 2.4
+  },
+  {
+   "clip": "clips/c08.mov",
+   "inicio": 6.0,
+   "dur": 2.0
+  },
+  {
+   "clip": "clips/c22.mov",
+   "inicio": 2.0,
+   "dur": 2.0
+  },
+  {
+   "clip": "clips/c25.mov",
+   "inicio": 0.0,
+   "dur": 3.0
+  },
+  {
+   "clip": "clips/c25.mov",
+   "inicio": 3.0,
+   "dur": 2.0
+  }
+ ],
+ "voz": "pov-mama-en-casa.mp3",
+ "palabras": "pov-mama-en-casa.json",
+ "gancho": {
+  "texto": "POV: mamá en casa…\\N y ganando",
+  "t1": 4.68
+ },
+ "ocultar": [],
+ "subs_fin": 16.2,
+ "big": [],
+ "icons": [
+  {
+   "name": "home",
+   "t0": 3.0,
+   "t1": 4.6,
+   "side": "right"
+  },
+  {
+   "name": "moneybag",
+   "t0": 5.6,
+   "t1": 6.8,
+   "side": "left"
+  },
+  {
+   "name": "building",
+   "t0": 11.4,
+   "t1": 12.6,
+   "side": "right"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "heart",
+   "title": "Trabajo para mamás",
+   "sub": "de verdad",
+   "t0": 6.9,
+   "t1": 9.1
+  },
+  {
+   "estilo": "notif",
+   "icon": "calendar",
+   "title": "Nueva visita agendada",
+   "sub": "Apto 302 · tu conjunto",
+   "t0": 9.3,
+   "t1": 11.1
+  }
+ ],
+ "end": {
+  "t0": 16.2,
+  "title": "¿Te ves haciéndolo?",
+  "sub": "Escribe QUIERO"
+ },
+ "musica": "alegre.mp3",
+ "salida": "pov-mama-en-casa.mp4"
+}

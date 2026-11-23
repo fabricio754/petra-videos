@@ -1,0 +1,95 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c04.mov",
+   "inicio": 0.0,
+   "dur": 2.5
+  },
+  {
+   "clip": "clips/c09.mov",
+   "inicio": 0.5,
+   "dur": 3.42
+  },
+  {
+   "clip": "clips/c20.mov",
+   "inicio": 0.0,
+   "dur": 3.68
+  },
+  {
+   "clip": "clips/c26.mov",
+   "inicio": 1.0,
+   "dur": 3.84
+  },
+  {
+   "clip": "clips/c21.mov",
+   "inicio": 0.0,
+   "dur": 3.0
+  },
+  {
+   "clip": "clips/c20.mov",
+   "inicio": 24.5,
+   "dur": 3.0
+  }
+ ],
+ "voz": "trabajo-desde-casa-colombia.mp3",
+ "palabras": "trabajo-desde-casa-colombia.json",
+ "gancho": {
+  "texto": "Trabajo desde casa\\N en Colombia REAL",
+  "t1": 4.0
+ },
+ "ocultar": [
+  [
+   11.3,
+   13.5
+  ]
+ ],
+ "subs_fin": 17.6,
+ "big": [
+  {
+   "text": "$50.000",
+   "t0": 11.3,
+   "t1": 13.5,
+   "y": 0.045,
+   "size": 290,
+   "label": "por cada visita"
+  }
+ ],
+ "icons": [
+  {
+   "name": "map-pin",
+   "t0": 1.9,
+   "t1": 2.5,
+   "side": "right"
+  },
+  {
+   "name": "cash",
+   "t0": 3.0,
+   "t1": 4.0,
+   "side": "left"
+  },
+  {
+   "name": "home",
+   "t0": 7.3,
+   "t1": 8.6,
+   "side": "right"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "check",
+   "title": "Sin inversión",
+   "sub": "no pagas nada primero",
+   "t0": 9.6,
+   "t1": 11.2
+  }
+ ],
+ "end": {
+  "t0": 17.6,
+  "title": "¿De qué ciudad?",
+  "sub": "Cuéntame aquí abajo"
+ },
+ "musica": "alegre.mp3",
+ "salida": "trabajo-desde-casa-colombia.mp4",
+ "variante": "v5a"
+}
