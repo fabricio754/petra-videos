@@ -1,0 +1,82 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c42.mov",
+   "inicio": 0.5,
+   "dur": 2.2
+  },
+  {
+   "clip": "clips/c02.mov",
+   "inicio": 0.5,
+   "dur": 1.8
+  },
+  {
+   "clip": "clips/c08.mov",
+   "inicio": 2.0,
+   "dur": 2.3
+  },
+  {
+   "clip": "clips/c43.mov",
+   "inicio": 3.0,
+   "dur": 2.2
+  },
+  {
+   "clip": "clips/c50.mp4",
+   "inicio": 3.5,
+   "dur": 2.4
+  },
+  {
+   "clip": "clips/c49.mp4",
+   "inicio": 1.3,
+   "dur": 3.0
+  }
+ ],
+ "voz": "expectativa-vs-realidad.mp3",
+ "palabras": "expectativa-vs-realidad.json",
+ "gancho": {
+  "texto": "Expectativa\\N vs. realidad",
+  "t1": 4.0
+ },
+ "ocultar": [],
+ "subs_fin": 10.9,
+ "big": [],
+ "icons": [
+  {
+   "name": "home",
+   "t0": 2.5,
+   "t1": 3.6,
+   "side": "right"
+  },
+  {
+   "name": "moneybag",
+   "t0": 8.9,
+   "t1": 10.0,
+   "side": "left"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "building",
+   "title": "EXPECTATIVA",
+   "sub": "oficina y trancón",
+   "t0": 4.1,
+   "t1": 6.2
+  },
+  {
+   "estilo": "app",
+   "icon": "baby",
+   "title": "REALIDAD",
+   "sub": "mi bebé al lado",
+   "t0": 6.4,
+   "t1": 8.5
+  }
+ ],
+ "end": {
+  "t0": 10.9,
+  "title": "Comenta QUIERO",
+  "sub": "y te explico"
+ },
+ "musica": "alegre.mp3",
+ "salida": "expectativa-vs-realidad.mp4"
+}

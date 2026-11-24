@@ -1,0 +1,71 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c47.mp4",
+   "inicio": 3.2,
+   "dur": 3.4
+  },
+  {
+   "clip": "clips/c17.mov",
+   "inicio": 40.0,
+   "dur": 2.2
+  },
+  {
+   "clip": "clips/c03.mov",
+   "inicio": 26.0,
+   "dur": 2.3
+  },
+  {
+   "clip": "clips/c47.mp4",
+   "inicio": 12.6,
+   "dur": 3.4
+  },
+  {
+   "clip": "clips/c48.mp4",
+   "inicio": 0.6,
+   "dur": 2.4
+  }
+ ],
+ "voz": "dia-4-pena-pedir-plata.mp3",
+ "palabras": "dia-4-pena-pedir-plata.json",
+ "gancho": {
+  "texto": "Día 4 · Me daba pena\\N pedir plata",
+  "t1": 3.4
+ },
+ "ocultar": [],
+ "subs_fin": 11.3,
+ "big": [],
+ "icons": [
+  {
+   "name": "cash",
+   "t0": 0.9,
+   "t1": 1.8,
+   "side": "right"
+  },
+  {
+   "name": "laptop-woman",
+   "t0": 4.4,
+   "t1": 5.4,
+   "side": "left"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "heart",
+   "title": "Mi plata, sin pedir",
+   "sub": "y sin dejar a mi bebé",
+   "t0": 8.3,
+   "t1": 10.3,
+   "y": 0.56
+  }
+ ],
+ "end": {
+  "t0": 11.3,
+  "title": "Toca el enlace",
+  "sub": "de mi perfil"
+ },
+ "musica": "piano.mp3",
+ "salida": "dia-4-pena-pedir-plata.mp4",
+ "variante": "v5a"
+}
