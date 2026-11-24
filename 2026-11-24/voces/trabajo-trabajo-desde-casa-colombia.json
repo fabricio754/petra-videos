@@ -1,41 +1,46 @@
 {
  "segmentos": [
   {
-   "clip": "clips/c04.mov",
-   "inicio": 0.0,
-   "dur": 2.5
+   "clip": "clips/c41.mov",
+   "inicio": 0,
+   "dur": 4.4
   },
   {
-   "clip": "clips/c09.mov",
-   "inicio": 0.5,
-   "dur": 3.42
-  },
-  {
-   "clip": "clips/c20.mov",
-   "inicio": 0.0,
-   "dur": 3.68
+   "clip": "clips/c46.mov",
+   "inicio": 3.0,
+   "dur": 1.9
   },
   {
    "clip": "clips/c26.mov",
    "inicio": 1.0,
-   "dur": 3.84
+   "dur": 3.4
   },
   {
-   "clip": "clips/c21.mov",
+   "clip": "clips/c26.mov",
+   "inicio": 5.0,
+   "dur": 1.6
+  },
+  {
+   "clip": "clips/c38.mov",
    "inicio": 0.0,
-   "dur": 3.0
+   "dur": 2.5
   },
   {
-   "clip": "clips/c20.mov",
-   "inicio": 24.5,
-   "dur": 3.0
+   "clip": "clips/c45.mov",
+   "inicio": 3.0,
+   "dur": 2.0
+  },
+  {
+   "clip": "clips/c44.mov",
+   "inicio": 0,
+   "dur": 3.6
   }
  ],
  "voz": "trabajo-desde-casa-colombia.mp3",
  "palabras": "trabajo-desde-casa-colombia.json",
  "gancho": {
   "texto": "Trabajo desde casa\\N en Colombia REAL",
-  "t1": 4.0
+  "t1": 4.4
  },
  "ocultar": [
   [

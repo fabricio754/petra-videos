@@ -1,46 +1,46 @@
 {
  "segmentos": [
   {
-   "clip": "clips/c18.mov",
-   "inicio": 0.0,
+   "clip": "clips/c40.mov",
+   "inicio": 0,
+   "dur": 2.9
+  },
+  {
+   "clip": "clips/c39.mov",
+   "inicio": 0,
+   "dur": 2.8
+  },
+  {
+   "clip": "clips/c43.mov",
+   "inicio": 3.0,
+   "dur": 3.1
+  },
+  {
+   "clip": "clips/c15.mov",
+   "inicio": 31.0,
+   "dur": 2.0
+  },
+  {
+   "clip": "clips/c14.mov",
+   "inicio": 14.0,
+   "dur": 2.3
+  },
+  {
+   "clip": "clips/c14.mov",
+   "inicio": 29.0,
+   "dur": 2.5
+  },
+  {
+   "clip": "clips/c14.mov",
+   "inicio": 49.0,
    "dur": 2.88
-  },
-  {
-   "clip": "clips/c01.mov",
-   "inicio": 0.0,
-   "dur": 2.76
-  },
-  {
-   "clip": "clips/c23.mov",
-   "inicio": 0.5,
-   "dur": 3.24
-  },
-  {
-   "clip": "clips/c11.mov",
-   "inicio": 5.0,
-   "dur": 2.0
-  },
-  {
-   "clip": "clips/c27.mov",
-   "inicio": 7.0,
-   "dur": 2.0
-  },
-  {
-   "clip": "clips/c27.mov",
-   "inicio": 11.0,
-   "dur": 2.24
-  },
-  {
-   "clip": "clips/c18.mov",
-   "inicio": 6.0,
-   "dur": 3.4
   }
  ],
  "voz": "dia-3-verlo-dormido.mp3",
  "palabras": "dia-3-verlo-dormido.json",
  "gancho": {
   "texto": "Solo lo iba a\\N ver dormido",
-  "t1": 2.88
+  "t1": 2.9
  },
  "ocultar": [],
  "subs_fin": 16.8,

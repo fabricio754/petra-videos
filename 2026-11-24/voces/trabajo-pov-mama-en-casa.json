@@ -1,44 +1,39 @@
 {
  "segmentos": [
   {
-   "clip": "clips/c02.mov",
-   "inicio": 0.0,
+   "clip": "clips/c42.mov",
+   "inicio": 0.5,
    "dur": 2.4
   },
   {
-   "clip": "clips/c19.mov",
-   "inicio": 0.5,
+   "clip": "clips/c16.mov",
+   "inicio": 0.0,
    "dur": 2.28
   },
   {
-   "clip": "clips/c19.mov",
-   "inicio": 5.5,
-   "dur": 2.12
+   "clip": "clips/c36.mov",
+   "inicio": 2.4,
+   "dur": 2.2
   },
   {
-   "clip": "clips/c08.mov",
-   "inicio": 0.5,
-   "dur": 2.4
+   "clip": "clips/c35.mov",
+   "inicio": 2.3,
+   "dur": 2.3
   },
   {
-   "clip": "clips/c08.mov",
-   "inicio": 6.0,
+   "clip": "clips/c37.mov",
+   "inicio": 1.0,
    "dur": 2.0
   },
   {
    "clip": "clips/c22.mov",
    "inicio": 2.0,
-   "dur": 2.0
+   "dur": 2.6
   },
   {
-   "clip": "clips/c25.mov",
-   "inicio": 0.0,
-   "dur": 3.0
-  },
-  {
-   "clip": "clips/c25.mov",
-   "inicio": 3.0,
-   "dur": 2.0
+   "clip": "clips/c44.mov",
+   "inicio": 0.03,
+   "dur": 3.92
   }
  ],
  "voz": "pov-mama-en-casa.mp3",
