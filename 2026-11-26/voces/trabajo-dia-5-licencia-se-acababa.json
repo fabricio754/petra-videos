@@ -1,0 +1,64 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c40.mov",
+   "inicio": 0.0,
+   "dur": 3.0
+  },
+  {
+   "clip": "clips/c23.mov",
+   "inicio": 2.0,
+   "dur": 2.4
+  },
+  {
+   "clip": "clips/c50.mp4",
+   "inicio": 0.0,
+   "dur": 3.6
+  },
+  {
+   "clip": "clips/c20.mov",
+   "inicio": 26.0,
+   "dur": 3.1
+  },
+  {
+   "clip": "clips/c48.mp4",
+   "inicio": 0.1,
+   "dur": 3.05
+  }
+ ],
+ "voz": "dia-5-licencia-se-acababa.mp3",
+ "palabras": "dia-5-licencia-se-acababa.json",
+ "gancho": {
+  "texto": "Día 5 · Se me acababa\\N la licencia",
+  "t1": 1.4
+ },
+ "ocultar": [],
+ "subs_fin": 12.1,
+ "big": [],
+ "icons": [
+  {
+   "name": "calendar",
+   "t0": 4.6,
+   "t1": 6.6,
+   "side": "right"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "heart",
+   "title": "Hoy gano mi plata",
+   "sub": "y él sigue conmigo",
+   "t0": 9.4,
+   "t1": 11.9
+  }
+ ],
+ "end": {
+  "t0": 12.1,
+  "title": "Toca el enlace",
+  "sub": "de mi perfil"
+ },
+ "musica": "piano.mp3",
+ "salida": "dia-5-licencia-se-acababa.mp4",
+ "variante": "v5a"
+}

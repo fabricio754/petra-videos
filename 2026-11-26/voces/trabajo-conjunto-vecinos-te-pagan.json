@@ -1,0 +1,87 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c11.mov",
+   "inicio": 2.0,
+   "dur": 1.5
+  },
+  {
+   "clip": "clips/c22.mov",
+   "inicio": 2.5,
+   "dur": 2.1
+  },
+  {
+   "clip": "clips/c26.mov",
+   "inicio": 1.0,
+   "dur": 2.9
+  },
+  {
+   "clip": "clips/c37.mov",
+   "inicio": 2.0,
+   "dur": 2.6
+  },
+  {
+   "clip": "clips/c21.mov",
+   "inicio": 0.3,
+   "dur": 3.4
+  },
+  {
+   "clip": "clips/c49.mp4",
+   "inicio": 0.4,
+   "dur": 3.8
+  }
+ ],
+ "voz": "conjunto-vecinos-te-pagan.mp3",
+ "palabras": "conjunto-vecinos-te-pagan.json",
+ "gancho": {
+  "texto": "¿Vives\\N en conjunto?",
+  "t1": 1.5
+ },
+ "ocultar": [
+  [
+   4.2,
+   6.5
+  ]
+ ],
+ "subs_fin": 12.5,
+ "big": [
+  {
+   "text": "$50.000",
+   "t0": 4.2,
+   "t1": 6.5,
+   "y": 0.045,
+   "size": 290,
+   "label": "por cada visita"
+  }
+ ],
+ "icons": [
+  {
+   "name": "building",
+   "t0": 1.6,
+   "t1": 3.5,
+   "side": "left"
+  },
+  {
+   "name": "phone",
+   "t0": 7.0,
+   "t1": 9.0,
+   "side": "left"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "notif",
+   "title": "Nueva visita agendada",
+   "sub": "Apto 302 · mañana 10:00 a. m.",
+   "t0": 9.6,
+   "t1": 12.2
+  }
+ ],
+ "end": {
+  "t0": 12.5,
+  "title": "Comenta QUIERO",
+  "sub": "y te explico"
+ },
+ "musica": "alegre.mp3",
+ "salida": "conjunto-vecinos-te-pagan.mp4"
+}
