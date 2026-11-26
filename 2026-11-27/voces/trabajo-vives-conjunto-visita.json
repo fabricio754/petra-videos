@@ -1,0 +1,15 @@
+{"segmentos":[
+ {"clip":"clips/c42.mov","inicio":0.5,"dur":1.5},
+ {"clip":"clips/c22.mov","inicio":2.5,"dur":2.4},
+ {"clip":"clips/c26.mov","inicio":1.0,"dur":3.8},
+ {"clip":"clips/c15.mov","inicio":46.0,"dur":3.4},
+ {"clip":"clips/c21.mov","inicio":0.3,"dur":2.4},
+ {"clip":"clips/c49.mp4","inicio":0.4,"dur":2.8}],
+ "voz":"vives-conjunto-visita.mp3","palabras":"vives-conjunto-visita.json",
+ "gancho":{"texto":"¿Vives\\N en conjunto?","t1":1.5},
+ "ocultar":[[4.2,6.8]],"subs_fin":14.3,
+ "big":[{"text":"$50.000","t0":4.2,"t1":6.8,"y":0.045,"size":290,"label":"por cada visita"}],
+ "icons":[{"name":"building","t0":1.6,"t1":3.7,"side":"left"},{"name":"confetti","t0":11.2,"t1":12.2,"side":"right"}],
+ "cards":[{"estilo":"app","icon":"home","title":"Trabajo sin inversión","sub":"desde casa, con tu bebé","t0":7.8,"t1":10.9}],
+ "end":{"t0":14.3,"title":"Comenta QUIERO","sub":"y te explico"},
+ "musica":"alegre.mp3","salida":"vives-conjunto-visita.mp4"}

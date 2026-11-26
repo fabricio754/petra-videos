@@ -1,0 +1,82 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c23.mov",
+   "inicio": 2.6,
+   "dur": 2.5
+  },
+  {
+   "clip": "clips/c25.mov",
+   "inicio": 2.0,
+   "dur": 2.3
+  },
+  {
+   "clip": "clips/c36.mov",
+   "inicio": 1.5,
+   "dur": 3.0
+  },
+  {
+   "clip": "clips/c11.mov",
+   "inicio": 69.0,
+   "dur": 2.4
+  },
+  {
+   "clip": "clips/c10.mov",
+   "inicio": 0.5,
+   "dur": 2.3
+  },
+  {
+   "clip": "clips/c49.mp4",
+   "inicio": 0.4,
+   "dur": 2.5
+  }
+ ],
+ "voz": "trabajo-si-hay.mp3",
+ "palabras": "trabajo-si-hay.json",
+ "gancho": {
+  "texto": "#TrabajoSíHay",
+  "t1": 2.5
+ },
+ "ocultar": [],
+ "subs_fin": 13.0,
+ "big": [],
+ "icons": [
+  {
+   "name": "building",
+   "t0": 8.8,
+   "t1": 9.9,
+   "side": "right"
+  },
+  {
+   "name": "heart",
+   "t0": 9.9,
+   "t1": 11.0,
+   "side": "left"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "home",
+   "title": "Trabajos para mamá",
+   "sub": "desde casa · sin dejar a tu hijo",
+   "t0": 2.7,
+   "t1": 5.6
+  },
+  {
+   "estilo": "app",
+   "icon": "check",
+   "title": "Sin inversión",
+   "sub": "y sin horario fijo",
+   "t0": 6.4,
+   "t1": 8.0
+  }
+ ],
+ "end": {
+  "t0": 13.0,
+  "title": "Comenta QUIERO",
+  "sub": "y te explico"
+ },
+ "musica": "alegre.mp3",
+ "salida": "trabajo-si-hay.mp4"
+}
