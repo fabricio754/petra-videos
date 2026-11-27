@@ -17,6 +17,10 @@ El trabajo (ver ejemplo_trabajo.json) trae:
               ya está completo en el cuadro 0 (sin fundido ni escala) y el primer plano se parte en
               golpes de zoom (punch-in) cada ~1,2 s mientras dura el gancho, para que haya cambio
               visual antes del segundo 1 y del segundo 2 (ahí se nos va la gente).
+              "v6a" = título fijo: cuando termina el gancho, su texto queda arriba como título pequeño
+              (caja rosada) hasta la tarjeta final, para que quien llega a mitad del video sepa de qué
+              se trata y no se vaya entre el segundo 3 y el 6. Se oculta en los tramos de cifra (big).
+              Clave opcional "titulo" para cambiar ese texto. Se pueden juntar: "v5a+v6a".
   estilo      "v3" (por defecto) o "v2". v3: color cálido, zoom en cada corte, gancho en caja rosada,
               subtítulos palabra por palabra con la palabra activa en amarillo y efectos de sonido
 Pasos: montaje 1080x1920 con corrección de HDR → efectos Postcard → subtítulos → mezcla
@@ -45,7 +49,8 @@ if ESTILO == "v3":
     CROP = ("scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1,"
             "eq=contrast=1.05:saturation=1.18:brightness=0.02:gamma_r=1.03:gamma_b=0.97")
 
-VARIANTE = job.get("variante")
+VARIANTE = job.get("variante") or ""
+VARIANTES = set(VARIANTE.replace(" ", "").split("+")) - {""}
 
 def zoom(i, d, punch=None):
     """v3: el primer plano entra con un golpe de zoom; los demás alternan acercar y alejar suave.
@@ -66,7 +71,7 @@ TONE = "zscale=t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,tonemap=mobius:d
 
 # 1. Montaje
 segs = [dict(x) for x in job["segmentos"]]
-if VARIANTE == "v5a" and segs:
+if "v5a" in VARIANTES and segs:
     # Parte el primer plano en golpes de ~1,2 s mientras dura el gancho (zoom 1,00 → 1,16 → 1,06 → 1,20…).
     s0, g1 = segs[0], (job.get("gancho") or {}).get("t1", 0)
     lim = min(s0["dur"], max(g1, 2.4))
@@ -130,9 +135,22 @@ for i, w in enumerate(words):
 ev = []
 if hook:
     anim = "{\\fad(120,150)\\fscx70\\fscy70\\t(0,180,\\fscx104\\fscy104)\\t(180,260,\\fscx100\\fscy100)}" if ESTILO == "v3" else "{\\fad(150,150)}"
-    if VARIANTE == "v5a":
+    if "v5a" in VARIANTES:
         anim = "{\\fad(0,150)}"  # completo desde el cuadro 0
     ev.append(f"Dialogue: 0,{ts(0)},{ts(hook['t1'])},Hook,,0,0,0,,{anim}{hook['texto']}")
+if hook and "v6a" in VARIANTES:
+    # Título fijo: el gancho se queda arriba, pequeño, desde t1 hasta la tarjeta final (sin tapar cifras).
+    tit = job.get("titulo") or hook["texto"].replace("\\N", " ").replace("  ", " ").strip()
+    huecos = sorted((b_["t0"], b_["t1"]) for b_ in job.get("big", []))
+    tramos, t_ = [], hook["t1"]
+    for a_, b_ in huecos:
+        if a_ > t_: tramos.append((t_, min(a_, fin)))
+        t_ = max(t_, b_)
+    if t_ < fin: tramos.append((t_, fin))
+    for n_, (a_, b_) in enumerate(tramos):
+        if b_ - a_ < 0.4: continue
+        anim = "{\\fad(0,120)\\fscx88\\fscy88\\t(0,200,\\fscx100\\fscy100)}" if n_ == 0 and a_ == hook["t1"] else "{\\fad(150,120)}"
+        ev.append(f"Dialogue: 1,{ts(a_)},{ts(b_)},Tit,,0,0,0,,{anim}{tit}")
 chunk_words, cur = [], []
 for i, w in enumerate(words):
     cur.append(w)
@@ -169,7 +187,8 @@ ESTILOS_V2 = """Style: Cap,Poppins,120,&H00FFFFFF,&H00FFFFFF,&H00000000,&H640000
 Style: Hook,Poppins,175,&H00FFFFFF,&H00FFFFFF,&H00000000,&H78000000,-1,0,0,0,100,100,0,0,1,14,4,8,60,60,230,1"""
 # v3: subtítulo más grueso con sombra; gancho blanco sobre caja rosada Petra (#FF5C93)
 ESTILOS_V3 = """Style: Cap,Poppins,128,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,11,5,2,60,60,520,1
-Style: Hook,Poppins,150,&H00FFFFFF,&H00FFFFFF,&H00935CFF,&H00935CFF,-1,0,0,0,100,100,0,0,3,24,0,8,70,70,250,1"""
+Style: Hook,Poppins,150,&H00FFFFFF,&H00FFFFFF,&H00935CFF,&H00935CFF,-1,0,0,0,100,100,0,0,3,24,0,8,70,70,250,1
+Style: Tit,Poppins,80,&H00FFFFFF,&H00FFFFFF,&H00935CFF,&H00935CFF,-1,0,0,0,100,100,0,0,3,16,0,8,90,90,250,1"""
 ass = f"{tmp}/subs.ass"
 open(ass, "w").write("""[Script Info]
 ScriptType: v4.00+
