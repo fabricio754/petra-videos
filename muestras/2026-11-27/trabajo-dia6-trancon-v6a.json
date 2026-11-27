@@ -1,0 +1,81 @@
+{
+ "segmentos": [
+  {
+   "clip": "clips/c41.mov",
+   "inicio": 0.0,
+   "dur": 2.6
+  },
+  {
+   "clip": "clips/c24.mov",
+   "inicio": 0.5,
+   "dur": 2.6
+  },
+  {
+   "clip": "clips/c39.mov",
+   "inicio": 0.0,
+   "dur": 2.2
+  },
+  {
+   "clip": "clips/c17.mov",
+   "inicio": 98.0,
+   "dur": 2.4
+  },
+  {
+   "clip": "clips/c19.mov",
+   "inicio": 2.0,
+   "dur": 3.1
+  },
+  {
+   "clip": "clips/c35.mov",
+   "inicio": 2.4,
+   "dur": 2.1
+  }
+ ],
+ "voz": "dia6-trancon.mp3",
+ "palabras": "dia6-trancon.json",
+ "gancho": {
+  "texto": "Día 6 · El trancón\\Nme lo robaba",
+  "t1": 2.4
+ },
+ "ocultar": [],
+ "subs_fin": 12.9,
+ "big": [],
+ "icons": [
+  {
+   "name": "clock",
+   "t0": 5.3,
+   "t1": 7.0,
+   "side": "right"
+  },
+  {
+   "name": "home",
+   "t0": 7.6,
+   "t1": 9.1,
+   "side": "left"
+  },
+  {
+   "name": "heart",
+   "t0": 9.8,
+   "t1": 10.9,
+   "side": "right"
+  }
+ ],
+ "cards": [
+  {
+   "estilo": "app",
+   "icon": "baby",
+   "title": "Mamá que trabaja",
+   "sub": "y tiene hijos",
+   "t0": 2.8,
+   "t1": 5.2
+  }
+ ],
+ "end": {
+  "t0": 12.9,
+  "title": "Toca el enlace",
+  "sub": "de mi perfil"
+ },
+ "musica": "piano.mp3",
+ "salida": "dia6-trancon-v6a.mp4",
+ "variante": "v5a+v6a"
+}
