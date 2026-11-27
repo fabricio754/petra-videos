@@ -1,0 +1,14 @@
+{"segmentos":[
+ {"clip":"clips/c52.mp4","inicio":0.0,"dur":1.5},
+ {"clip":"clips/c56.mp4","inicio":0.0,"dur":2.4},
+ {"clip":"clips/c43.mov","inicio":2.0,"dur":2.6},
+ {"clip":"clips/c23.mov","inicio":2.0,"dur":2.4},
+ {"clip":"clips/c27.mov","inicio":6.0,"dur":3.34},
+ {"clip":"clips/c51.mp4","inicio":0.0,"dur":2.06}],
+ "voz":"mamade.mp3","palabras":"mamade.json",
+ "gancho":{"texto":"Me estaba\\N perdiendo","t1":1.4},
+ "ocultar":[],"subs_fin":12.24,"big":[],
+ "icons":[{"name":"moneybag","t0":6.56,"t1":7.6,"side":"right"},{"name":"sparkles","t0":7.7,"t1":8.7,"side":"left"},{"name":"heart","t0":9.1,"t1":10.4,"side":"right"}],
+ "cards":[{"estilo":"app","icon":"laptop-woman","title":"Mamá emprendedora","sub":"desde casa","t0":4.0,"t1":6.4,"y":0.13}],
+ "end":{"t0":12.24,"title":"Comenta QUIERO","sub":"y te explico"},
+ "musica":"piano.mp3","salida":"deje-de-ser-la-mama-de.mp4"}

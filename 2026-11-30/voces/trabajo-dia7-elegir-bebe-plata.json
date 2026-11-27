@@ -1,0 +1,14 @@
+{"segmentos":[
+ {"clip":"clips/c18.mov","inicio":2.0,"dur":3.0},
+ {"clip":"clips/c09.mov","inicio":1.0,"dur":2.9},
+ {"clip":"clips/c57.mp4","inicio":1.0,"dur":3.3},
+ {"clip":"clips/c20.mov","inicio":1.0,"dur":1.5},
+ {"clip":"clips/c25.mov","inicio":0.5,"dur":2.3},
+ {"clip":"clips/c10.mov","inicio":0.5,"dur":3.9}],
+ "voz":"dia7.mp3","palabras":"dia7.json",
+ "gancho":{"texto":"Día 7 · ¿Él o\\N mi plata?","t1":2.96},
+ "ocultar":[],"subs_fin":14.76,"big":[],
+ "icons":[{"name":"home","t0":6.5,"t1":8.1,"side":"left"},{"name":"heart","t0":10.8,"t1":12.4,"side":"right"}],
+ "cards":[{"estilo":"notif","icon":"calendar","title":"Nueva visita agendada","sub":"Apto en tu conjunto","t0":9.2,"t1":11.0}],
+ "end":{"t0":14.76,"title":"Toca el enlace","sub":"de mi perfil"},
+ "musica":"piano.mp3","salida":"dia7-elegir-bebe-plata.mp4","variante":"v5a"}

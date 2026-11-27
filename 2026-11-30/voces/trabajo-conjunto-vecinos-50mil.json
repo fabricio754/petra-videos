@@ -1,0 +1,15 @@
+{"segmentos":[
+ {"clip":"clips/c53.mp4","inicio":1.0,"dur":1.5},
+ {"clip":"clips/c22.mov","inicio":2.5,"dur":2.3},
+ {"clip":"clips/c26.mov","inicio":1.0,"dur":3.1},
+ {"clip":"clips/c54.mp4","inicio":0.0,"dur":2.4},
+ {"clip":"clips/c55.mp4","inicio":0.1,"dur":2.6},
+ {"clip":"clips/c51.mp4","inicio":0.0,"dur":2.06}],
+ "voz":"conjunto.mp3","palabras":"conjunto.json",
+ "gancho":{"texto":"¿Vives\\N en conjunto?","t1":1.5},
+ "ocultar":[[3.84,6.9]],"subs_fin":11.92,
+ "big":[{"text":"$50.000","t0":3.84,"t1":6.9,"y":0.045,"size":290,"label":"por cada visita"}],
+ "icons":[{"name":"building","t0":1.6,"t1":3.7,"side":"left"},{"name":"home","t0":7.4,"t1":9.2,"side":"right"}],
+ "cards":[{"estilo":"app","icon":"baby","title":"Con él en brazos","sub":"sin dejar de maternar","t0":9.4,"t1":11.7}],
+ "end":{"t0":11.92,"title":"Comenta QUIERO","sub":"y te explico"},
+ "musica":"alegre.mp3","salida":"conjunto-vecinos-50mil.mp4"}
